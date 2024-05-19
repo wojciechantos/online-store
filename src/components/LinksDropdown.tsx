@@ -19,19 +19,19 @@ function LinksDropdown() {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className='w-52 lg:hidden' align='start' sideOffset={25}>
-                {links.map((link) => (
-                    <DropdownMenuItem key={link.label}>
+                {links.map(({ href, label }) => (
+                    <DropdownMenuItem key={label}>
                         <NavLink
-                            to={link.href}
+                            to={href}
                             className={(isActive) => `capitalize w-full ${isActive ? 'text-primary' : ''}`}
                         >
-                            {link.label}
+                            {label}
                         </NavLink>
                     </DropdownMenuItem>
                 ))}
             </DropdownMenuContent>
         </DropdownMenu>
-    );
-}
+    )
+};
 
 export default LinksDropdown;
