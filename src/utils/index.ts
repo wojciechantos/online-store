@@ -1,4 +1,6 @@
 export * from './types';
 export * from './links';
 export * from './applyTheme';
-export * from './customFetch';
+
+import customFetch from './customFetch';
+export { customFetch };
