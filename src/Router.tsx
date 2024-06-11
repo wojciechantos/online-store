@@ -13,6 +13,7 @@ import {
 } from './pages';
 import { ErrorElement } from '@/components';
 import { loader as landingLoader } from '@/pages/Landing';
+import { loader as productsLoader } from '@/pages/Products';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
 			{
 				path: 'products',
 				element: <Products />,
+                loader: productsLoader,
                 errorElement: <ErrorElement />,
             },
 			{
