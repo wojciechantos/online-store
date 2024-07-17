@@ -1,8 +1,3 @@
-export type ProductsResponse = {
-	data: Product[];
-	meta: ProductsMeta;
-};
-
 export type Product = {
 	id: number;
 	attributes: {
@@ -21,15 +16,32 @@ export type Product = {
 	};
 };
 
-export type ProductsMeta = {
-	categories: string[];
-	companies: string[];
-	pagination: Pagination;
-};
-
 export type Pagination = {
 	page: number;
 	pageCount: number;
 	pageSize: number;
 	total: number;
 };
+
+export type ProductsMeta = {
+	categories: string[];
+	companies: string[];
+	pagination: Pagination;
+};
+
+export type ProductsResponse = {
+	data: Product[];
+	meta: ProductsMeta;
+};
+
+export type Params = {
+	search?: string;
+	category?: string;
+	company?: string;
+	order?: string;
+	price?: string;
+	shipping?: string;
+	page?: number;
+};
+
+export type ProductsResponseWithParams = ProductsResponse & { params: Params };

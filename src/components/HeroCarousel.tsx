@@ -22,7 +22,7 @@ function HeroCarousel() {
 					{carouselImages.map((image, i) => (
 						<CarouselItem key={i}>
 							<Card>
-								<CardContent className="p-2">
+								<CardContent className='p-2'>
 									<img
 										src={image}
 										alt='hero'
@@ -33,8 +33,8 @@ function HeroCarousel() {
 						</CarouselItem>
 					))}
 				</CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
+				<CarouselPrevious />
+				<CarouselNext />
 			</Carousel>
 		</div>
 	);
