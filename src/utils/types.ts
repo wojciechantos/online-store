@@ -45,3 +45,12 @@ export type Params = {
 };
 
 export type ProductsResponseWithParams = ProductsResponse & { params: Params };
+
+export type FormItemBaseProps = {
+	name: string;
+	label?: string;
+	defaultValue?: string;
+};
+
+export type FormInputProps = FormItemBaseProps & { type: string };
+export type SelectInputProps = FormItemBaseProps & { options: string[] };

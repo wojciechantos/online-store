@@ -14,5 +14,5 @@ export function applyTheme(theme: Theme) {
 		return;
 	}
 
-    root.classList.add(theme);
+	root.classList.add(theme);
 }

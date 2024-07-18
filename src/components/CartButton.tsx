@@ -1,6 +1,6 @@
-import { Button } from './ui/button';
-import { ShoppingCart } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ShoppingCart } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 function CartButton() {
 	const numItemsInCart = 5;

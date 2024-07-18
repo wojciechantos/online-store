@@ -1,12 +1,6 @@
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
-
-type FormInputProps = {
-	name: string;
-	type: string;
-	label?: string;
-	defaultValue?: string;
-};
+import { FormInputProps } from '@/utils/types';
 
 function FormInput({ label, name, type, defaultValue }: FormInputProps) {
 	return (

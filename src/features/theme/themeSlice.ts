@@ -1,5 +1,5 @@
-import { applyTheme } from '@/utils';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { applyTheme } from '@/utils';
 
 export type Theme = 'dark' | 'light' | 'system';
 
@@ -8,7 +8,7 @@ type ThemeState = {
 };
 
 const initializeTheme = (): Theme => {
-	const theme = localStorage.getItem('theme') as Theme || 'system';
+	const theme = (localStorage.getItem('theme') as Theme) || 'system';
 	applyTheme(theme);
 	return theme;
 };
@@ -22,8 +22,7 @@ const themeSlice = createSlice({
 	initialState,
 	reducers: {
 		setTheme: (state, action: PayloadAction<Theme>) => {
-            console.log(state, action);
-            state.theme = action.payload;
+			state.theme = action.payload;
 			applyTheme(action.payload);
 			localStorage.setItem('theme', action.payload);
 		},
