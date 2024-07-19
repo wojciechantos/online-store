@@ -1,3 +1,4 @@
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import {
 	Cart,
 	Login,
@@ -14,7 +15,7 @@ import {
 import { ErrorElement } from '@/components';
 import { loader as landingLoader } from '@/pages/Landing';
 import { loader as productsLoader } from '@/pages/Products';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { loader as singleProductLoader } from '@/pages/SingleProduct';
 
 const router = createBrowserRouter([
 	{
@@ -25,40 +26,41 @@ const router = createBrowserRouter([
 			{
 				index: true,
 				element: <Landing />,
-                loader: landingLoader,
-                errorElement: <ErrorElement />,
+				loader: landingLoader,
+				errorElement: <ErrorElement />,
 			},
 			{
 				path: 'products',
 				element: <Products />,
-                loader: productsLoader,
-                errorElement: <ErrorElement />,
-            },
+				loader: productsLoader,
+				errorElement: <ErrorElement />,
+			},
 			{
 				path: 'products/:id',
 				element: <SingleProduct />,
-                errorElement: <ErrorElement />,
-            },
+				loader: singleProductLoader,
+				errorElement: <ErrorElement />,
+			},
 			{
 				path: 'cart',
 				element: <Cart />,
-                errorElement: <ErrorElement />,
-            },
+				errorElement: <ErrorElement />,
+			},
 			{
 				path: 'about',
 				element: <About />,
-                errorElement: <ErrorElement />,
-            },
+				errorElement: <ErrorElement />,
+			},
 			{
 				path: 'checkout',
 				element: <Checkout />,
-                errorElement: <ErrorElement />,
-            },
+				errorElement: <ErrorElement />,
+			},
 			{
 				path: 'orders',
 				element: <Orders />,
-                errorElement: <ErrorElement />,
-            },
+				errorElement: <ErrorElement />,
+			},
 		],
 	},
 	{
@@ -73,6 +75,6 @@ const router = createBrowserRouter([
 	},
 ]);
 
-export const Router = () => {
+export function Router() {
 	return <RouterProvider router={router} />;
-};
+}
