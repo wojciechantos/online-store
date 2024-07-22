@@ -17,6 +17,7 @@ export { default as HeroCarousel } from './HeroCarousel';
 export { default as ProductsGrid } from './ProductsGrid';
 export { default as SectionTitle } from './SectionTitle';
 export { default as ProductsList } from './ProductsList';
+export { default as SubmitButton } from './SubmitButton';
 export { default as LinksDropdown } from './LinksDropdown';
 export { default as CartItemsList } from './CartItemsList';
 export { default as FeaturedProducts } from './FeaturedProducts';
