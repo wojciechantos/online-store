@@ -5,13 +5,13 @@ import {
 	ComplexPaginationContainer,
 } from '@/components';
 import { customFetch } from '@/utils';
-import { ReduxStore, store } from '@/store';
+import { ReduxStore } from '@/store';
 import { type OrdersResponse } from '@/utils';
 import { toast } from '@/components/ui/use-toast';
 
 export const loader =
 	(store: ReduxStore): LoaderFunction =>
-	async ({ request }): Promise<OrdersResponse | null> => {
+	async ({ request }): Promise<OrdersResponse | Response | null> => {
 		const { user } = store.getState().userState;
 
 		if (!user) {

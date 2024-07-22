@@ -8,7 +8,7 @@ import { customFetch, formatAsDollars, type Checkout } from '@/utils';
 
 export const action =
 	(store: ReduxStore): ActionFunction =>
-	async ({ request }): Promise<null> => {
+	async ({ request }): Promise<Response | null> => {
 		const formData = await request.formData();
 		const name = formData.get('name') as string;
 		const address = formData.get('address') as string;
